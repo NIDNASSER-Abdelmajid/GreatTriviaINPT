@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF9800</color>
+    <color name="colorPrimaryDark">#180B3D</color>
+    <color name="colorAccent">#180B3D</color>
+
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="color1">#1193D0</color>
+    <color name="color2">#0BA9BD</color>
+
+    <color name="buttonBG">#FF9800</color>
+
+    <color name="background_color">#180d3b</color>
+    <color name="i">#FF74A4</color>
+    <color name="ii">#2196F3</color>
+    <color name="iii">#FF9800</color>
+    <color name="iv">#9C27B0</color>
+
+    <color name="false_answer">#FF0000</color>
+    <color name="true_answer">#32CD32</color>
+<color name="tess">#FFFF</color>
+
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--position widgets in a flexible way-->
+<!--specify that the attributes that are within the view group that it's decelerated in are android related-->
+<!--match the layout to the parent-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context="ma.inpt.quiztrivia.activities.HomeScreen">
+
+     <!--display a gif gttrivia-->
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/imageView6"
+        android:layout_width="196dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="156dp"
+        android:src="@drawable/gttrivia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- defining the “Play” button and its  characteristics  -->
+    <Button
+        android:id="@+id/bt_PlayButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:layout_marginBottom="190dp"
+        android:background="#49DEE3"
+        android:fontFamily="@font/vcrosdmono"
+        android:text="Play"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintVertical_bias="0.0" />
+    <!-- aligning in a single direction and connecting them to the parent view -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88">
+
+        <ImageView
+            android:id="@+id/img_scoreH"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/score"
+            tools:layout_editor_absoluteX="36dp"
+            tools:layout_editor_absoluteY="575dp" />
+
+        <ImageView
+            android:id="@+id/img_settingsH"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/settings"
+            tools:layout_editor_absoluteX="36dp"
+            tools:layout_editor_absoluteY="575dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

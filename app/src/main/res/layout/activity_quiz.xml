@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--make vertically scrollable views to determine the layout width, height & background -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:layout_height="match_parent"
+    tools:context="ma.inpt.quiztrivia.activities.QuizActivity">
+    <!--specify that the attributes that are within the view group that it's decelerated in are android related-->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="89dp">
+    
+        <!--displaying the heart icon drawable and putting constraints on it-->
+
+        <ImageView
+            android:id="@+id/imgLifeLine1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginEnd="100dp"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.393"
+            app:layout_constraintStart_toEndOf="@+id/imgLifeLine2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/heart_icon"
+            tools:ignore="MissingConstraints" />
+        
+<!--displaying the second heart icon and putting constraints on it-->
+        <ImageView
+            android:id="@+id/imgLifeLine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="160dp"
+            android:layout_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/imgLifeLine3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/heart_icon" />
+<!--displaying the third heart icon and displaying it-->
+        <ImageView
+            android:id="@+id/imgLifeLine3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="160dp"
+            android:layout_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/heart_icon" />
+<!--displaying th"29" following the requirements below and putting constraints in it-->
+        <TextView
+            android:id="@+id/txtTimer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/color2"
+            android:fontFamily="@font/minecraft"
+            android:gravity="center"
+            android:text="29"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCategoryHeading" />
+<!--aligning in a verical directiong while connecting to the parent view-->
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.48000002">
+<!-- displaying "what is the best full meaning of " following the requirements bellow and contraining it-->
+            <TextView
+                android:id="@+id/txtTriviaQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/question_container_bg"
+                android:fontFamily="@font/montserratextrabold"
+                android:gravity="center"
+                android:padding="10dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="What iWhat is the best full Meaning ofs the best full Meaning of"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.602" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+<!--defining the "design" button and its characteristics with the font and setting the background-->
+                <Button
+                    android:id="@+id/buttonA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_options_bg"
+                    android:fontFamily="@font/montserratextrabolditalic"
+                    android:onClick="buttonA"
+                    android:padding="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Design"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+<!--defining the "operating" button and its characteristics-->
+                <Button
+                    android:id="@+id/buttonB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_options_bg"
+                    android:fontFamily="@font/montserratextrabolditalic"
+                    android:onClick="buttonB"
+                    android:padding="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Operating"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+<!--aligning a horizontal layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+<!--defining the"desing" button and its characteristics-->
+                <Button
+                    android:id="@+id/buttonC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_options_bg"
+                    android:fontFamily="@font/montserratextrabolditalic"
+                    android:onClick="buttonC"
+                    android:padding="15dp"
+                    android:text="Design"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+<!--defining the "operating" button and its characteristics-->
+                <Button
+                    android:id="@+id/buttonD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_options_bg"
+                    android:fontFamily="@font/montserratextrabolditalic"
+                    android:onClick="buttonD"
+                    android:padding="15dp"
+                    android:text="Operating "
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+<!--diplaying the gtlogo and constraining it-->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/gtlogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+<!--displaying "java" following the requirements below--
+        <TextView
+            android:id="@+id/txtCategoryHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="204dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/minecraft"
+            android:text="Java"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
